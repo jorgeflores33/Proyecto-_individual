@@ -1,0 +1,55 @@
+@{ Layout = null; }
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalle Sucursal</title>
+    <link rel="stylesheet" href="@Url.Content("~/frontend/externo/contacto/detalle.css")">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">📘 PAPELABORANTE</div>
+    <button onclick="volver()">⬅ VOLVER AL DIRECTORIO</button>
+</header>
+
+<section class="detalle-container">
+
+    <h1>Detalles de Sucursal Centro - Tuxtla Gutiérrez</h1>
+
+    <div class="detalle-grid">
+
+        <div class="detalle-info">
+
+            <h3>Dirección Completa de la tienda</h3>
+            <p>📍 Calle Central #123<br>Tuxtla Gutiérrez, Chiapas, 29000</p>
+
+            <h3>Contacto Directo</h3>
+            <p>📞 961 123 45 67, Extensión 001</p>
+
+            <h3>Servicios Detallados</h3>
+            <ul>
+                <li>Venta al público en general</li>
+                <li>Atención corporativa</li>
+                <li>Asesoría personalizada</li>
+            </ul>
+
+            <h3>Horario de atención</h3>
+            <p>
+                Lunes a Sábado: 08:30am - 8:00pm <br>
+                Domingo: Cerrado
+            </p>
+
+        </div>
+
+        <div class="mapa">
+            <!-- aquí puedes poner imagen o mapa -->
+        </div>
+
+    </div>
+
+</section>
+
+<script src="@Url.Content("~/frontend/externo/contacto/detalle.js")"></script>
+</body>
+</html>

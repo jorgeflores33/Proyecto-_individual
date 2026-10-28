@@ -1,0 +1,66 @@
+@{ Layout = null; }
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Almacén</title>
+
+<link rel="stylesheet" href="@Url.Content("~/frontend/interno/almacen/css/almacen.css")">
+</head>
+
+<body>
+
+<!-- 🔵 NAVBAR -->
+<header class="navbar">
+    <div class="logo">📦 Almacén</div>
+
+    <div class="acciones">
+        <button onclick="window.location.href='/Interno/Index'">🏠 Inicio</button>
+        <button onclick="logout()">Cerrar sesión</button>
+    </div>
+</header>
+
+<!-- 🔥 LAYOUT -->
+<div class="layout">
+
+    <!-- 🟦 SIDEBAR -->
+    <aside class="sidebar">
+
+        <button onclick="ir('/Almacen/Entrada')">
+            📥 Entrada
+        </button>
+
+        <button onclick="ir('/Almacen/Salida')">
+            📤 Salida
+        </button>
+
+        <button onclick="ir('/Almacen/Traspasos')">
+            🔄 Traspaso
+        </button>
+
+        <button onclick="ir('/Almacen/Inventario')">
+            📊 Inventario
+        </button>
+
+        <button onclick="ir('/Almacen/Pedidos')">
+            📦 Pedido
+        </button>
+
+    </aside>
+
+    <!-- 🟩 CONTENIDO LIMPIO -->
+    <main class="contenido">
+
+        <div class="card">
+            <h2>Panel de Almacén</h2>
+            <p>Selecciona una opción del menú lateral para trabajar.</p>
+        </div>
+
+    </main>
+
+</div>
+
+<script src="@Url.Content("~/frontend/interno/almacen/js/almacen.js")"></script>
+
+</body>
+</html>

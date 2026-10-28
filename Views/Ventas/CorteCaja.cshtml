@@ -1,0 +1,92 @@
+@{ Layout = null; }
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Corte de Caja</title>
+
+<link rel="stylesheet" href="@Url.Content("~/frontend/interno/venta/css/venta_corte_caja.css")">
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="logo">💰 Corte de Caja</div>
+
+    <div class="acciones">
+        <button onclick="window.location.href='/Ventas/Index'">← Volver</button>
+        <button onclick="logout()">Cerrar sesión</button>
+    </div>
+</header>
+
+<div class="contenedor">
+
+    <div class="card">
+
+        <div class="card-header">
+
+            <!-- FILTROS -->
+            <input type="date" id="filtroFecha">
+            <input type="text" id="filtroSucursal" placeholder="Sucursal">
+
+            <button onclick="cargarCortes()">Filtrar</button>
+
+            <button class="btn-crear" onclick="abrirModal()">
+                + Registrar Corte
+            </button>
+
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Usuario</th>
+                    <th>Trabajador</th>
+                    <th>Sucursal</th>
+                    <th>Fecha</th>
+                    <th>Corte</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+
+            <tbody id="tablaCortes"></tbody>
+        </table>
+
+    </div>
+
+</div>
+
+<!-- 🔥 MODAL -->
+<div id="modalCorte" class="modal">
+    <div class="modal-box">
+
+        <h2>Registrar Corte</h2>
+
+        <input id="usuario" readonly>
+        <input id="trabajador" readonly>
+        <input id="sucursal" readonly>
+
+        <label>Efectivo</label>
+        <input id="efectivo" type="number">
+
+        <label>Débito</label>
+        <input id="debito" type="number">
+
+        <label>Crédito</label>
+        <input id="credito" type="number">
+
+        <label>Transferencia</label>
+        <input id="transferencia" type="number">
+
+        <div class="botones">
+            <button onclick="guardarCorte()">💾 Guardar</button>
+            <button onclick="cerrarModal()">❌ Cancelar</button>
+        </div>
+
+    </div>
+</div>
+
+<script src="@Url.Content("~/frontend/interno/venta/js/venta_corte_caja.js")"></script>
+
+</body>
+</html>

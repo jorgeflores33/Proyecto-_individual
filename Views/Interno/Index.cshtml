@@ -1,0 +1,113 @@
+@{ Layout = null; }
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Módulo Interno</title>
+
+<link rel="stylesheet" href="@Url.Content("~/frontend/interno/modulo_interno.css")">
+
+</head>
+
+<body>
+
+<!-- 🔵 NAVBAR -->
+<header class="navbar">
+
+    <div class="logo">
+        🏢 Módulo Interno
+    </div>
+
+    <div class="acciones">
+        <button onclick="logout()">
+            Cerrar sesión
+        </button>
+    </div>
+
+</header>
+
+<!-- 🔥 CONTENEDOR -->
+<div class="contenedor">
+
+    <h1>
+        Bienvenido al sistema interno
+    </h1>
+
+    <p>
+        Selecciona el módulo al que deseas acceder
+    </p>
+
+    <!-- 🔥 TARJETAS -->
+    <div class="grid-modulos">
+
+        <!-- ADMIN -->
+        <div
+            class="card"
+            id="modAdmin"
+            onclick="irModulo('admin')"
+        >
+            <div class="icono">⚙️</div>
+
+            <h2>Administrador</h2>
+
+            <p>
+                Gestión completa del sistema
+            </p>
+        </div>
+
+        <!-- VENTAS -->
+        <div
+            class="card"
+            id="modVentas"
+            onclick="irModulo('ventas')"
+        >
+            <div class="icono">💰</div>
+
+            <h2>Ventas</h2>
+
+            <p>
+                Punto de venta y pedidos
+            </p>
+        </div>
+
+        <!-- ALMACÉN -->
+        <div
+            class="card"
+            id="modAlmacen"
+            onclick="irModulo('almacen')"
+        >
+            <div class="icono">📦</div>
+
+            <h2>Almacén</h2>
+
+            <p>
+                Control de inventario
+            </p>
+        </div>
+
+        <!-- CONTABILIDAD -->
+        <div
+            class="card"
+            id="modConta"
+            onclick="irModulo('contabilidad')"
+        >
+            <div class="icono">📊</div>
+
+            <h2>Contabilidad</h2>
+
+            <p>
+                Finanzas y facturación
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="@Url.Content("~/frontend/interno/modulo_interno.js")"></script>
+
+</body>
+</html>

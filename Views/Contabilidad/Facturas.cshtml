@@ -1,0 +1,105 @@
+@{ Layout = null; }
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Facturas</title>
+
+<link rel="stylesheet" href="@Url.Content("~/frontend/interno/contabilidad/css/contabilidad_factura.css")">
+
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="logo">📄 Facturas</div>
+
+    <div class="acciones">
+        <button onclick="window.location.href='/Contabilidad/Index'">← Volver</button>
+        <button onclick="logout()">Cerrar sesión</button>
+    </div>
+</header>
+
+<div class="contenedor">
+
+    <div class="card">
+
+        <div class="card-header">
+
+            <!-- 🔍 BUSCADOR IZQUIERDA -->
+            <input type="text" id="buscador" placeholder="Buscar factura...">
+
+            <!-- FILTRO -->
+            <select id="tipoFactura">
+                <option value="proveedores">Proveedores</option>
+                <option value="clientes">Clientes</option>
+            </select>
+
+            <!-- BOTÓN -->
+            <button class="btn-crear" onclick="abrirModal()">
+                + Crear Factura
+            </button>
+
+        </div>
+
+        <!-- TABLA -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Folio</th>
+                    <th>Nombre</th>
+                    <th>Fecha</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+
+            <tbody id="tablaFacturas"></tbody>
+        </table>
+
+    </div>
+
+</div>
+
+<!-- 🔥 MODAL -->
+<div id="modalFactura" class="modal">
+
+    <div class="modal-box grande">
+
+        <h2>Crear Factura (Proveedor)</h2>
+
+        <div class="fila">
+            <input id="folio" placeholder="Folio">
+            <input id="fecha" type="date">
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Cantidad</th>
+                    <th>Precio</th>
+                    <th>Subtotal</th>
+                    <th>❌</th>
+                </tr>
+            </thead>
+
+            <tbody id="detalleFactura"></tbody>
+        </table>
+
+        <button class="btn-agregar" onclick="agregarFila()">➕ Agregar</button>
+
+        <h3>Total: $<span id="total">0</span></h3>
+
+        <div class="botones">
+            <button class="btn-guardar" onclick="guardarFactura()">💾 Guardar</button>
+            <button class="btn-cancelar" onclick="cerrarModal()">❌ Cancelar</button>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="@Url.Content("~/frontend/interno/contabilidad/js/contabilidad_factura.js")"></script>
+
+</body>
+</html>

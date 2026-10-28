@@ -1,0 +1,163 @@
+@{ Layout = null; }
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>
+    Nómina
+</title>
+
+<link
+    rel="stylesheet"
+    href="@Url.Content("~/frontend/interno/contabilidad/css/contabilidad_nomina.css")"
+>
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+        💰 Nómina
+    </div>
+
+    <div class="acciones">
+
+        <button
+            onclick="window.location.href='/Contabilidad/Index'"
+        >
+            ← Volver
+        </button>
+
+        <button onclick="logout()">
+            Cerrar sesión
+        </button>
+
+    </div>
+
+</header>
+
+
+<div class="contenedor">
+
+    <div class="card">
+
+        <div class="card-header">
+
+            <h2>
+                Nómina de Trabajadores
+            </h2>
+
+            <button
+                class="btn-crear"
+                onclick="abrirModal()"
+            >
+                + Generar Nómina
+            </button>
+
+        </div>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>
+                        Trabajador
+                    </th>
+
+                    <th>
+                        Días
+                    </th>
+
+                    <th>
+                        Sueldo Base
+                    </th>
+
+                    <th>
+                        Total Pago
+                    </th>
+
+                    <th>
+                        Acciones
+                    </th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="tablaNomina"></tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+
+<!-- ====================================== -->
+<!-- MODAL -->
+<!-- ====================================== -->
+
+<div
+    id="modalNomina"
+    class="modal"
+>
+
+    <div class="modal-box grande">
+
+        <h2>
+            Generar Nómina
+        </h2>
+
+        <select id="trabajador"></select>
+
+        <label>
+            Fecha Inicio
+        </label>
+
+        <input
+            type="date"
+            id="fechaInicio"
+        >
+
+        <label>
+            Fecha Fin
+        </label>
+
+        <input
+            type="date"
+            id="fechaFin"
+        >
+
+        <div class="botones">
+
+            <button
+                class="btn-guardar"
+                onclick="generarNomina()"
+            >
+                💾 Generar
+            </button>
+
+            <button
+                class="btn-cancelar"
+                onclick="cerrarModal()"
+            >
+                ❌ Cancelar
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="@Url.Content("~/frontend/interno/contabilidad/js/contabilidad_nomina.js")"></script>
+
+</body>
+</html>

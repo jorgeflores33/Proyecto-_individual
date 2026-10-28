@@ -1,0 +1,201 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #f4f6f9;
+}
+
+.navbar {
+    background: #1e3a5f;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contenedor {
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.card-header {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+input,
+select {
+    padding: 8px;
+}
+
+.btn-crear {
+    background: #1abc9c;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button {
+    border: none;
+    padding: 10px 14px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th,
+td {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+
+/* ====================================== */
+/* MODAL */
+/* ====================================== */
+
+.modal {
+
+    display: none;
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.5);
+
+    z-index: 9999;
+
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ====================================== */
+/* MODAL BOX */
+/* ====================================== */
+
+.modal-box {
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    width: 90%;
+    max-width: 1100px;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+
+    animation: aparecer .2s ease;
+}
+
+
+/* ====================================== */
+/* MODAL GRANDE */
+/* ====================================== */
+
+.grande {
+
+    width: 85%;
+}
+
+
+/* ====================================== */
+/* INPUTS */
+/* ====================================== */
+
+.modal-box input,
+.modal-box select {
+
+    width: 100%;
+
+    margin-bottom: 12px;
+
+    box-sizing: border-box;
+}
+
+
+/* ====================================== */
+/* BOTONES */
+/* ====================================== */
+
+.botones {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 20px;
+
+    flex-wrap: wrap;
+}
+
+
+/* ====================================== */
+/* TABLA MODAL */
+/* ====================================== */
+
+.modal-box table {
+
+    margin-top: 15px;
+}
+
+
+/* ====================================== */
+/* TITULOS */
+/* ====================================== */
+
+h2,
+h3 {
+
+    text-align: center;
+}
+
+
+/* ====================================== */
+/* ANIMACION */
+/* ====================================== */
+
+@keyframes aparecer {
+
+    from {
+
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    to {
+
+        transform: scale(1);
+        opacity: 1;
+    }
+}

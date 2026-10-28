@@ -1,0 +1,163 @@
+@{ Layout = null; }
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>
+        Traspasos
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="@Url.Content("~/frontend/interno/almacen/css/almacen_traspaso.css")"
+    >
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+        🔄 Traspasos
+    </div>
+
+    <div class="acciones">
+
+        <button onclick="ir('/Almacen/Index')">
+            ← Volver
+        </button>
+
+        <button onclick="logout()">
+            Cerrar sesión
+        </button>
+
+    </div>
+
+</header>
+
+
+<div class="layout">
+
+    <!-- CONTENIDO -->
+    <main class="contenido">
+
+        <div class="card">
+
+            <div class="card-header">
+
+                <h2>
+                    Historial de Traspasos
+                </h2>
+
+                <button
+                    class="btn-crear"
+                    onclick="abrirModal()"
+                >
+                    + Nuevo Traspaso
+                </button>
+
+            </div>
+
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Folio</th>
+                        <th>Fecha</th>
+                        <th>Origen</th>
+                        <th>Destino</th>
+                        <th>Acciones</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="tablaTraspasos">
+
+                    <tr>
+
+                        <td colspan="5">
+                            Cargando...
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+
+<!-- MODAL -->
+<div
+    id="modal"
+    class="modal"
+>
+
+    <div class="modal-box">
+
+        <h2>
+            Nuevo Traspaso
+        </h2>
+
+
+        <input
+            type="text"
+            id="folio"
+            readonly
+        >
+
+
+        <select id="origen"></select>
+
+        <select id="destino"></select>
+
+
+        <h3>
+            Productos
+        </h3>
+
+        <div id="productos"></div>
+
+
+        <button
+            class="btn-agregar"
+            onclick="agregarProducto()"
+        >
+            + Agregar producto
+        </button>
+
+
+        <div class="botones">
+
+            <button onclick="guardar()">
+                💾 Guardar
+            </button>
+
+            <button onclick="cerrarModal()">
+                ❌ Cancelar
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="@Url.Content("~/frontend/interno/almacen/js/almacen_traspaso.js")"></script>
+
+</body>
+</html>

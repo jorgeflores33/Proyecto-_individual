@@ -1,0 +1,244 @@
+@{ Layout = null; }
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>
+    Inventario
+</title>
+
+<link
+    rel="stylesheet"
+    href="@Url.Content("~/frontend/interno/almacen/css/almacen_inventario.css")"
+>
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+        📦 Inventario
+    </div>
+
+    <div class="acciones">
+
+        <button
+            onclick="window.location.href='/Almacen/Index'"
+        >
+            ← Volver
+        </button>
+
+        <button onclick="logout()">
+            Cerrar sesión
+        </button>
+
+    </div>
+
+</header>
+
+
+<div class="contenedor">
+
+    <div class="card">
+
+        <div class="card-header">
+
+            <!-- 🔍 BUSCADOR -->
+            <input
+
+                type="text"
+
+                id="buscador"
+
+                placeholder="Buscar folio..."
+            >
+
+
+            <!-- 📅 FECHA -->
+            <input
+                type="date"
+                id="filtroFecha"
+            >
+
+
+            <!-- 📂 CATEGORÍA -->
+            <select id="filtroCategoria">
+
+                <option value="">
+                    Todas las categorías
+                </option>
+
+            </select>
+
+
+            <!-- ➕ BOTÓN -->
+            <button
+                class="btn-crear"
+                onclick="abrirModal()"
+            >
+                + Nuevo Inventario
+            </button>
+
+        </div>
+
+
+        <!-- 📋 TABLA -->
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>
+                        Folio
+                    </th>
+
+                    <th>
+                        Sucursal
+                    </th>
+
+                    <th>
+                        Categoría
+                    </th>
+
+                    <th>
+                        Fecha
+                    </th>
+
+                    <th>
+                        PDF
+                    </th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody id="tablaInventarios">
+
+                <tr>
+
+                    <td colspan="5">
+                        Sin inventarios
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+
+
+<!-- 🔥 MODAL -->
+<div
+    id="modal"
+    class="modal"
+>
+
+    <div class="modal-box">
+
+        <h2>
+            Nuevo Inventario
+        </h2>
+
+
+        <!-- 🏢 SUCURSAL -->
+        <select id="sucursal">
+
+            <option value="">
+                Seleccionar sucursal
+            </option>
+
+        </select>
+
+
+        <!-- 📂 CATEGORÍA -->
+        <select id="categoria">
+
+            <option value="">
+                Seleccionar categoría
+            </option>
+
+        </select>
+
+
+        <!-- 📦 PRODUCTOS -->
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>
+                        Código
+                    </th>
+
+                    <th>
+                        Producto
+                    </th>
+
+                    <th>
+                        Sistema
+                    </th>
+
+                    <th>
+                        Física
+                    </th>
+
+                    <th>
+                        Diferencia
+                    </th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody id="tablaProductos">
+
+                <tr>
+
+                    <td colspan="5">
+                        Selecciona sucursal y categoría
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+
+        <!-- 🔘 BOTONES -->
+        <div class="botones">
+
+            <button onclick="guardar()">
+                💾 Guardar
+            </button>
+
+            <button onclick="cerrarModal()">
+                ❌ Cancelar
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="@Url.Content("~/frontend/interno/almacen/js/almacen_inventario.js")"></script>
+
+</body>
+
+</html>

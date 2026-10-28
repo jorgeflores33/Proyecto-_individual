@@ -1,0 +1,152 @@
+@{ Layout = null; }
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>
+    Trabajadores
+</title>
+
+<link
+    rel="stylesheet"
+    href="@Url.Content("~/frontend/interno/administrador/css/administrador_trabajadores.css")"
+>
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+        👷 Trabajadores
+    </div>
+
+    <div class="acciones">
+
+        <button
+            onclick="window.location.href='/Administrador/Index'"
+        >
+            ← Volver
+        </button>
+
+        <button onclick="logout()">
+            Cerrar sesión
+        </button>
+
+    </div>
+
+</header>
+
+
+<div class="contenedor">
+
+    <div class="card">
+
+        <div class="card-header">
+
+            <h2>
+                Gestión de Trabajadores
+            </h2>
+
+            <button
+                class="btn-crear"
+                onclick="abrirModal()"
+            >
+                + Registrar Trabajador
+            </button>
+
+        </div>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>ID</th>
+
+                    <th>Nombre</th>
+
+                    <th>Fecha Nacimiento</th>
+
+                    <th>Área</th>
+
+                    <th>Salario</th>
+
+                    <th>Acciones</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="tablaTrabajadores"></tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+
+<!-- 🔥 MODAL -->
+<div
+    id="modalTrabajador"
+    class="modal"
+>
+
+    <div class="modal-box">
+
+        <h2 id="tituloModal">
+            Nuevo Trabajador
+        </h2>
+
+        <input
+            type="hidden"
+            id="id"
+        >
+
+        <input
+            id="nombre"
+            placeholder="Nombre"
+        >
+
+        <input
+            id="fecha"
+            type="date"
+        >
+
+        <input
+            id="area"
+            placeholder="Área"
+        >
+
+        <input
+            id="salario"
+            type="number"
+            placeholder="Salario"
+        >
+
+        <div class="botones">
+
+            <button onclick="guardar()">
+                💾 Guardar
+            </button>
+
+            <button onclick="cerrarModal()">
+                ❌ Cancelar
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="@Url.Content("~/frontend/interno/administrador/js/administrador_trabajadores.js")"></script>
+
+</body>
+</html>

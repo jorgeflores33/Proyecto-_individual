@@ -1,0 +1,68 @@
+@{ Layout = null; }
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Productos - Papelaborante</title>
+
+<link rel="stylesheet" href="@Url.Content("~/frontend/externo/productos/productos.css")">
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="logo">📘 PAPELABORANTE</div>
+
+    <nav class="menu">
+        <a href="/Home/Index">Inicio</a>
+        <a href="/Externo/Productos">Productos</a>
+        <a href="/Externo/Acerca">Acerca de</a>
+    </nav>
+
+    <div class="actions">
+        <!-- 🔥 LO DEJAMOS PERO YA NO ES EL PRINCIPAL -->
+        <input type="text" id="buscadorNav" placeholder="🔍">
+    </div>
+</header>
+
+<section class="productos-container">
+
+    <h1>Productos</h1>
+
+    <!-- 🔥 BARRA DE FILTROS (AHORA COMPLETA) -->
+    <div class="barra-filtros">
+
+        <!-- BUSCADOR PRINCIPAL -->
+        <input type="text" id="buscador" placeholder="🔍 Buscar producto...">
+
+        <!-- CATEGORÍA -->
+        <select id="filtroCategoria">
+            <option value="">Todas las categorías</option>
+            <option value="Útiles Escolares">Útiles Escolares</option>
+            <option value="Papelería y Oficina">Papelería y Oficina</option>
+            <option value="Arte y Dibujo">Arte y Dibujo</option>
+            <option value="Cómputo">Cómputo</option>
+        </select>
+
+        <!-- PRECIO -->
+        <select id="filtroPrecio">
+            <option value="">Todos los precios</option>
+            <option value="0-50">$0 - $50</option>
+            <option value="50-100">$50 - $100</option>
+            <option value="100-500">$100 - $500</option>
+            <option value="500+">Más de $500</option>
+        </select>
+
+    </div>
+
+    <!-- PRODUCTOS -->
+    <div id="gridProductos" class="grid">
+        <!-- JS -->
+    </div>
+
+</section>
+
+<script src="@Url.Content("~/frontend/externo/productos/productos.js")"></script>
+
+</body>
+</html>

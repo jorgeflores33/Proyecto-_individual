@@ -1,0 +1,177 @@
+@{ Layout = null; }
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>
+        Productos
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="@Url.Content("~/frontend/interno/administrador/css/administrador_productos.css")"
+    >
+
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <div class="logo">
+            📦 Productos
+        </div>
+
+        <div class="acciones">
+
+            <button onclick="ir('/Administrador/Index')">
+                ← Volver
+            </button>
+
+            <button onclick="logout()">
+                Cerrar sesión
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <div class="contenedor">
+
+        <div class="card">
+
+            <div class="card-header">
+
+                <input
+                    type="text"
+                    id="buscador"
+                    placeholder="🔍 Buscar producto..."
+                >
+
+                <button
+                    class="btn-crear"
+                    onclick="abrirModal()"
+                >
+                    + Crear Producto
+                </button>
+
+            </div>
+
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Código</th>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                        <th>Categoría</th>
+                        <th>Imagen</th>
+                        <th>Acciones</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="tablaProductos"></tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+
+    <!-- 🔥 MODAL -->
+    <div
+        id="modalProducto"
+        class="modal"
+    >
+
+        <div class="modal-box">
+
+            <h2 id="tituloModal">
+                Nuevo Producto
+            </h2>
+
+            <input
+                id="id"
+                type="hidden"
+            >
+
+            <input
+                id="codigo"
+                placeholder="Código del producto"
+            >
+
+            <input
+                id="nombre"
+                placeholder="Nombre del producto"
+            >
+
+            <input
+                id="descripcion"
+                placeholder="Descripción"
+            >
+
+            <input
+                id="precio"
+                type="number"
+                placeholder="Precio"
+            >
+
+
+            <!-- 🔥 CATEGORIA -->
+            <select id="categoria">
+
+                <option value="">
+                    Seleccionar categoría
+                </option>
+
+            </select>
+
+
+
+
+            <!-- 🔥 IMAGEN -->
+            <input
+                id="imagen"
+                placeholder="Link de imagen"
+            >
+
+
+            <!-- 🔥 PREVIEW -->
+            <img
+                id="preview"
+                width="100"
+                style="margin-top:10px;"
+            >
+
+
+            <div class="botones">
+
+                <button onclick="guardarProducto()">
+                    💾 Guardar
+                </button>
+
+                <button onclick="cerrarModal()">
+                    ❌ Cancelar
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="@Url.Content("~/frontend/interno/administrador/js/administrador_productos.js")"></script>
+
+</body>
+
+</html>

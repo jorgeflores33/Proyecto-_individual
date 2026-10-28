@@ -1,0 +1,127 @@
+/* 🔹 BASE */
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #f4f6f9;
+}
+
+/* 🔵 NAVBAR */
+.navbar {
+    background: #1e3a5f;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+/* 🔹 CONTENEDOR */
+.contenedor {
+    padding: 20px;
+}
+
+/* 🔹 CARD */
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* HEADER */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* BOTÓN */
+.btn-crear {
+    background: #1abc9c;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+/* TABLA */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+
+th {
+    background: #ecf0f1;
+}
+
+/* BOTONES */
+td button {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* 🔥 MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.5);
+
+    justify-content: center;
+    align-items: center;
+}
+
+/* CAJA MODAL */
+.modal-box {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    width: 350px;
+}
+
+/* INPUTS */
+.modal-box input,
+.modal-box select {
+    width: 100%;
+    margin: 6px 0;
+    padding: 8px;
+}
+
+/* BOTONES MODAL */
+.botones {
+    display: flex;
+    justify-content: space-between;
+}
+
+.botones button {
+    width: 48%;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+/* GUARDAR */
+.botones button:first-child {
+    background: #27ae60;
+    color: white;
+}
+
+/* CANCELAR */
+.botones button:last-child {
+    background: #c0392b;
+    color: white;
+}

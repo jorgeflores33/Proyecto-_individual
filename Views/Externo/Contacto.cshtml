@@ -1,0 +1,84 @@
+@{ Layout = null; }
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacto - Papelaborante</title>
+
+    <!-- 🔥 CSS CORREGIDO -->
+    <link rel="stylesheet" href="@Url.Content("~/frontend/externo/contacto/contacto.css")">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="logo">📘 PAPELABORANTE</div>
+
+    <nav class="menu">
+        <!-- 🔥 RUTAS CORREGIDAS -->
+        <a href="/Home/Index">Inicio</a>
+        <a href="/Externo/Productos">Productos</a>
+        <a href="/Externo/Acerca">Acerca de</a>
+    </nav>
+
+    <div class="actions">
+        <input type="text" placeholder="🔍">
+    </div>
+</header>
+
+<!-- CONTENIDO -->
+<section class="contacto-container">
+
+    <h1>Directorio de Sucursales de Papelaborante</h1>
+
+    <!-- SUCURSAL 1 -->
+    <div class="card-sucursal">
+        <h2>Sucursal Centro (Tuxtla Gutiérrez)</h2>
+
+        <div class="info">
+            <div>
+                <p><b>📍 Dirección:</b></p>
+                <p>Calle Central #123, Tuxtla Gutiérrez, Chiapas, 29000</p>
+                <a href="#" onclick="verDetalleSucursal()">Más detalles</a>
+            </div>
+
+            <div>
+                <p><b>📋 Servicios:</b></p>
+                <p>Venta al público, Atención corporativa</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SUCURSAL 2 -->
+    <div class="card-sucursal">
+        <h2>Sucursal Poniente (Tuxtla Gutiérrez)</h2>
+
+        <div class="info">
+            <div>
+                <p><b>📍 Dirección:</b></p>
+                <p>Blvd. Belisario Domínguez #456, Tuxtla Gutiérrez, Chiapas, 29030</p>
+                <a href="#" onclick="verDetalleSucursal()">Más detalles</a>
+            </div>
+
+            <div>
+                <p><b>📋 Servicios:</b></p>
+                <p>Punto de entrega exprés, Centro de copiado</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTACTO GENERAL -->
+    <div class="contacto-general">
+        <h2>Contáctanos General</h2>
+        <p>E-mail: contacto&#64;papelaborante.mx</p>
+        <p>Central: +96 1112334567</p>
+    </div>
+
+</section>
+
+<!-- 🔥 JS CORREGIDO -->
+<script src="@Url.Content("~/frontend/externo/contacto/contacto.js")"></script>
+
+</body>
+</html>

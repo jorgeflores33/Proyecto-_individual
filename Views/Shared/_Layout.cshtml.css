@@ -1,0 +1,6 @@
+/* Estilos aislados de la plantilla MVC; el frontend real utiliza wwwroot/frontend */
+.cabecera-mvc { background: #172b4d; padding: 16px 24px; display:flex; justify-content:space-between; gap:20px; }
+.cabecera-mvc a { color:white; text-decoration:none; font-weight:600; }
+.cabecera-mvc nav { display:flex; gap:16px; }
+.contenedor-mvc { max-width:1000px; min-height:75vh; padding:36px 20px; margin:0 auto; }
+.pie-mvc { text-align:center; padding:20px; color:#444; }

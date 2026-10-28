@@ -1,0 +1,50 @@
+@{ Layout = null; }
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Administrador</title>
+
+<link rel="stylesheet" href="@Url.Content("~/frontend/interno/administrador/css/administrador.css")">
+</head>
+
+<body>
+
+<!-- 🔵 HEADER IGUAL QUE CONTABILIDAD -->
+<header class="navbar">
+    <div class="logo">⚙️ Administrador</div>
+
+    <div class="acciones">
+        <button onclick="window.location.href='/Interno/Index'">🏠 Inicio</button>
+        <button onclick="logout()">Cerrar sesión</button>
+    </div>
+</header>
+
+<!-- 🔥 CONTENEDOR -->
+<div class="contenedor">
+
+    <div class="card">
+
+        <div class="card-header">
+            <h2>Módulos Administrador</h2>
+        </div>
+
+        <div class="menu-grid">
+
+            <button onclick="ir('/Administrador/Usuarios')">Usuarios</button>
+            <button onclick="ir('/Administrador/Trabajadores')">Trabajadores</button>
+            <button onclick="ir('/Administrador/Sucursales')">Sucursales</button>
+            <button onclick="ir('/Administrador/Productos')">Productos</button>
+            <button onclick="ir('/Administrador/Categorias')">Categoria</button>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="@Url.Content("~/frontend/interno/administrador/js/administrador.js")"></script>
+
+</body>
+</html>

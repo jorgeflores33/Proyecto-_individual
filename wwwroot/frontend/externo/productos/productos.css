@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #f4f6f9;
+}
+
+/* NAVBAR */
+.navbar {
+    background: #1e3a5f;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.menu a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.actions input,
+.actions select {
+    padding: 6px;
+    border-radius: 5px;
+    border: none;
+}
+
+/* CONTENEDOR */
+.productos-container {
+    padding: 20px;
+}
+
+/* 🔥 BARRA FILTROS */
+.barra-filtros {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.barra-filtros input,
+.barra-filtros select {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+/* CARD */
+.card-producto {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card-producto:hover {
+    transform: scale(1.05);
+}
+
+/* IMAGEN */
+.card-producto img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* TEXTO */
+.card-producto h3 {
+    margin: 10px 0 5px;
+}
+
+.card-producto p {
+    margin: 5px 0;
+    color: #555;
+}
+
+/* BOTÓN */
+.card-producto button {
+    background: #27ae60;
+    color: white;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.card-producto button:hover {
+    background: #219150;
+}

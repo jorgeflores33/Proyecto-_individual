@@ -1,0 +1,170 @@
+@{ Layout = null; }
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>
+        Salida de Mercancía
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="@Url.Content("~/frontend/interno/almacen/css/almacen_salida.css")"
+    >
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+        📤 Salida de Mercancía
+    </div>
+
+    <div class="acciones">
+
+        <button onclick="ir('/Almacen/Index')">
+            ← Volver
+        </button>
+
+        <button onclick="logout()">
+            Cerrar sesión
+        </button>
+
+    </div>
+
+</header>
+
+
+<div class="layout">
+
+    <main class="contenido">
+
+        <!-- CARD -->
+        <div class="card">
+
+            <div class="card-header">
+
+                <h2>
+                    Salidas de Inventario
+                </h2>
+
+                <button
+                    class="btn-crear"
+                    onclick="abrirModal()"
+                >
+                    - Registrar Salida
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- TABLA -->
+        <div class="card-registros">
+
+            <h2>
+                Existencia por Sucursal
+            </h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Producto</th>
+                        <th>Sucursal</th>
+                        <th>Existencia</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="tablaRegistros">
+
+                    <tr>
+
+                        <td colspan="3">
+                            Cargando...
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<!-- MODAL -->
+<div
+    id="modalSalida"
+    class="modal"
+>
+
+    <div class="modal-box">
+
+        <h2>
+            Nueva Salida
+        </h2>
+
+
+        <!-- PRODUCTO -->
+        <select id="producto">
+
+            <option value="">
+                Seleccionar producto
+            </option>
+
+        </select>
+
+
+        <!-- SUCURSAL -->
+        <select id="sucursal">
+
+            <option value="">
+                Seleccionar sucursal
+            </option>
+
+        </select>
+
+
+        <!-- CANTIDAD -->
+        <input
+            type="number"
+            id="cantidad"
+            placeholder="Cantidad"
+        >
+
+
+        <div class="botones">
+
+            <button onclick="guardar()">
+                💾 Guardar
+            </button>
+
+            <button onclick="cerrarModal()">
+                ❌ Cancelar
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="@Url.Content("~/frontend/interno/almacen/js/almacen_salida.js")"></script>
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+@model Papeleria.Models.ErrorViewModel
+@{ ViewData["Title"] = "Error"; Layout = "_Layout"; }
+<h1>Ocurrió un error al procesar la solicitud</h1>
+<p>Intenta de nuevo. Si el problema continúa, revisa los registros del servidor.</p>
+@if (Model.ShowRequestId)
+{
+    <p><strong>Identificador de solicitud:</strong> <code>@Model.RequestId</code></p>
+}

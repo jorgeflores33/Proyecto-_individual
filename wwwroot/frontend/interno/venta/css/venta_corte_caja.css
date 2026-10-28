@@ -1,0 +1,161 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #f4f6f9;
+}
+
+.navbar {
+    background: #1e3a5f;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contenedor {
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.card-header {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+input {
+    padding: 8px;
+}
+
+.btn-crear {
+    background: #1abc9c;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+
+/* =========================================
+MODAL
+========================================= */
+
+.modal {
+
+    display: none;
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.5);
+
+    z-index: 9999;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+/* =========================================
+CAJA MODAL
+========================================= */
+
+.modal-box {
+
+    background: white;
+
+    width: 400px;
+
+    max-width: 90%;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    animation: aparecer 0.2s ease;
+}
+
+
+/* =========================================
+BOTONES
+========================================= */
+
+.botones {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    margin-top: 15px;
+}
+
+.botones button {
+
+    flex: 1;
+
+    border: none;
+
+    padding: 12px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+ANIMACIÓN
+========================================= */
+
+@keyframes aparecer {
+
+    from {
+
+        opacity: 0;
+
+        transform: scale(0.9);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: scale(1);
+    }
+}

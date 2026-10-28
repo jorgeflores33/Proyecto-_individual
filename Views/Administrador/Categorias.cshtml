@@ -1,0 +1,50 @@
+@{ Layout = null; }
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Administrador Categorías</title>
+    <link rel="stylesheet" href="@Url.Content("~/frontend/interno/administrador/css/administrador_categoria.css")">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Administrador de Categorías</h1>
+        <button class="btn-agregar" onclick="window.location.href='/Administrador/Index'">← Volver</button>
+        <button class="btn-agregar" onclick="abrirModal()">+ Nueva Categoría</button>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID Categoría</th>
+                    <th>Nombre</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+
+            <tbody id="tablaCategorias">
+                <!-- Datos dinámicos -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h2 id="tituloModal">Nueva Categoría</h2>
+
+            <input type="hidden" id="id_categoria">
+
+            <label>Nombre:</label>
+            <input type="text" id="nombre_categoria" placeholder="Nombre de la categoría">
+
+            <div class="botones">
+                <button onclick="guardarCategoria()">Guardar</button>
+                <button onclick="cerrarModal()">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="@Url.Content("~/frontend/interno/administrador/js/administrador_categoria.js")"></script>
+</body>
+</html>

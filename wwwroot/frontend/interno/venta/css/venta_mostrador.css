@@ -1,0 +1,1343 @@
+body {
+
+    margin: 0;
+
+    font-family: Arial;
+
+    background: #f4f6f9;
+}
+
+
+/* ========================================= */
+/* NAVBAR */
+/* ========================================= */
+
+.navbar {
+
+    background: #1e3a5f;
+
+    color: white;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 15px 25px;
+
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 999;
+}
+
+
+/* ========================================= */
+/* LOGO */
+/* ========================================= */
+
+.logo {
+
+    font-size: 32px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+
+/* ========================================= */
+/* ACCIONES */
+/* ========================================= */
+
+.acciones {
+
+    display: flex;
+
+    gap: 10px;
+}
+
+
+/* ========================================= */
+/* BOTONES NAV */
+/* ========================================= */
+
+.acciones button {
+
+    border: none;
+
+    background: white;
+
+    color: #1e3a5f;
+
+    padding: 10px 18px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.acciones button:hover {
+
+    background: #d6e2ee;
+}
+
+
+/* ========================================= */
+/* CONTENEDOR */
+/* ========================================= */
+
+.contenedor {
+
+    display: flex;
+
+    gap: 20px;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+}
+
+
+/* ========================================= */
+/* IZQUIERDA */
+/* ========================================= */
+
+.izquierda {
+
+    flex: 2;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+
+/* ========================================= */
+/* DERECHA */
+/* ========================================= */
+
+.derecha {
+
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+
+/* ========================================= */
+/* CARD */
+/* ========================================= */
+
+.card {
+
+    background: white;
+
+    border-radius: 16px;
+
+    padding: 20px;
+
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+
+    box-sizing: border-box;
+}
+
+
+/* ========================================= */
+/* CARD RESUMEN */
+/* ========================================= */
+
+.card-resumen {
+
+    border-top: 5px solid #27ae60;
+}
+
+
+/* ========================================= */
+/* TITULOS */
+/* ========================================= */
+
+h2 {
+
+    margin-top: 0;
+
+    margin-bottom: 20px;
+
+    color: #1e3a5f;
+
+    font-size: 22px;
+}
+
+
+/* ========================================= */
+/* GRUPOS */
+/* ========================================= */
+
+.grupo {
+
+    margin-bottom: 18px;
+}
+
+
+/* ========================================= */
+/* LABEL */
+/* ========================================= */
+
+.grupo label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-weight: bold;
+
+    color: #1f2d3d;
+
+    font-size: 15px;
+}
+
+
+/* ========================================= */
+/* INPUTS */
+/* ========================================= */
+
+input,
+select {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #ccd3db;
+
+    border-radius: 8px;
+
+    box-sizing: border-box;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+
+/* ========================================= */
+/* READONLY */
+/* ========================================= */
+
+input[readonly] {
+
+    background: #eef2f5;
+}
+
+
+/* ========================================= */
+/* FOCUS */
+/* ========================================= */
+
+input:focus,
+select:focus {
+
+    outline: none;
+
+    border-color: #3498db;
+
+    box-shadow: 0 0 5px rgba(52,152,219,0.35);
+}
+
+
+/* ========================================= */
+/* PLACEHOLDER */
+/* ========================================= */
+
+::placeholder {
+
+    color: #9aa4af;
+}
+
+
+/* ========================================= */
+/* RESULTADOS */
+/* ========================================= */
+
+#resultadosBusqueda,
+#resultadosClientes {
+
+    background: white;
+
+    border: 1px solid #d8dee5;
+
+    border-radius: 10px;
+
+    overflow-y: auto;
+
+    max-height: 250px;
+
+    margin-top: 5px;
+}
+
+
+/* ========================================= */
+/* ITEM RESULTADO */
+/* ========================================= */
+
+.resultado-item {
+
+    padding: 12px;
+
+    border-bottom: 1px solid #f1f1f1;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+/* ========================================= */
+/* HOVER RESULTADO */
+/* ========================================= */
+
+.resultado-item:hover {
+
+    background: #f5f8fb;
+}
+
+
+/* ========================================= */
+/* TABLAS */
+/* ========================================= */
+
+table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+}
+
+
+/* ========================================= */
+/* THEAD */
+/* ========================================= */
+
+thead {
+
+    background: #1e3a5f;
+
+    color: white;
+}
+
+
+/* ========================================= */
+/* TH */
+/* ========================================= */
+
+th {
+
+    padding: 14px;
+
+    font-size: 14px;
+}
+
+
+/* ========================================= */
+/* TD */
+/* ========================================= */
+
+td {
+
+    padding: 12px;
+
+    border-bottom: 1px solid #ececec;
+
+    text-align: center;
+}
+
+
+/* ========================================= */
+/* HOVER TABLA */
+/* ========================================= */
+
+tbody tr:hover {
+
+    background: #f9fbfc;
+}
+
+
+/* ========================================= */
+/* INPUT TABLA */
+/* ========================================= */
+
+td input {
+
+    width: 70px;
+
+    text-align: center;
+}
+
+
+/* ========================================= */
+/* BOTON ELIMINAR */
+/* ========================================= */
+
+td button {
+
+    border: none;
+
+    background: #e74c3c;
+
+    color: white;
+
+    padding: 7px 12px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+td button:hover {
+
+    background: #c0392b;
+}
+
+
+/* ========================================= */
+/* BOTON VENTAS */
+/* ========================================= */
+
+.btn-ventas {
+
+    width: 100%;
+
+    border: none;
+
+    background: #2874a6;
+
+    color: white;
+
+    padding: 18px;
+
+    border-radius: 14px;
+
+    cursor: pointer;
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.btn-ventas:hover {
+
+    background: #21618c;
+}
+
+
+/* ========================================= */
+/* PANEL VENTAS */
+/* ========================================= */
+
+.panel-ventas {
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    transition: all 0.4s ease;
+
+    margin-top: 15px;
+}
+
+
+/* ========================================= */
+/* PANEL ACTIVO */
+/* ========================================= */
+
+.panel-ventas.activo {
+
+    max-height: 900px;
+}
+
+
+/* ========================================= */
+/* CONTENIDO PANEL */
+/* ========================================= */
+
+.panel-ventas-contenido {
+
+    background: white;
+
+    border-radius: 12px;
+
+    padding: 20px;
+
+    border: 1px solid #dfe6ec;
+}
+
+
+/* ========================================= */
+/* BOTON EDITAR */
+/* ========================================= */
+
+.btn-editar-venta {
+
+    border: none;
+
+    background: #f39c12;
+
+    color: white;
+
+    padding: 7px 12px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    margin-right: 5px;
+}
+
+
+.btn-editar-venta:hover {
+
+    background: #d68910;
+}
+
+
+/* ========================================= */
+/* BOTON ELIMINAR */
+/* ========================================= */
+
+.btn-eliminar-venta {
+
+    border: none;
+
+    background: #e74c3c;
+
+    color: white;
+
+    padding: 7px 12px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+}
+
+
+.btn-eliminar-venta:hover {
+
+    background: #c0392b;
+}
+
+
+/* ========================================= */
+/* TOTALES */
+/* ========================================= */
+
+.totales {
+
+    margin-top: 25px;
+
+    border-top: 2px dashed #d0d7de;
+
+    padding-top: 20px;
+}
+
+
+/* ========================================= */
+/* TOTALES DIV */
+/* ========================================= */
+
+.totales div {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 12px;
+
+    font-size: 20px;
+}
+
+
+/* ========================================= */
+/* TOTAL */
+/* ========================================= */
+
+.total {
+
+    color: #27ae60;
+
+    font-size: 28px;
+
+    font-weight: bold;
+}
+
+
+/* ========================================= */
+/* CAMBIO */
+/* ========================================= */
+
+.cambio {
+
+    color: #2980b9;
+
+    font-size: 24px;
+
+    font-weight: bold;
+}
+
+
+/* ========================================= */
+/* BOTON COBRAR */
+/* ========================================= */
+
+.btn-cobrar {
+
+    width: 100%;
+
+    border: none;
+
+    background: #27ae60;
+
+    color: white;
+
+    padding: 18px;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    margin-top: 20px;
+
+    transition: 0.3s;
+}
+
+
+.btn-cobrar:hover {
+
+    background: #1f944f;
+}
+
+
+/* ========================================= */
+/* MODAL */
+/* ========================================= */
+
+.modal {
+
+    display: none;
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background: rgba(0,0,0,0.6);
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 5000;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+}
+
+
+/* ========================================= */
+/* MODAL CONTENIDO */
+/* ========================================= */
+
+.modal-contenido {
+
+    background: white;
+
+    width: 100%;
+
+    max-width: 600px;
+
+    border-radius: 16px;
+
+    padding: 25px;
+
+    box-sizing: border-box;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+}
+
+
+/* ========================================= */
+/* MODAL HEADER */
+/* ========================================= */
+
+.modal-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+
+/* ========================================= */
+/* BOTON CERRAR */
+/* ========================================= */
+
+.btn-cerrar {
+
+    border: none;
+
+    background: #e74c3c;
+
+    color: white;
+
+    width: 35px;
+
+    height: 35px;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.btn-cerrar:hover {
+
+    background: #c0392b;
+}
+
+
+/* ========================================= */
+/* FACTURACIÓN */
+/* ========================================= */
+
+#facturaRFCVista,
+#facturaCorreoVista {
+
+    background: #eef2f5;
+}
+
+
+/* ========================================= */
+/* SCROLL */
+/* ========================================= */
+
+::-webkit-scrollbar {
+
+    width: 8px;
+
+    height: 8px;
+}
+
+
+/* ========================================= */
+/* TRACK */
+/* ========================================= */
+
+::-webkit-scrollbar-track {
+
+    background: #f1f1f1;
+}
+
+
+/* ========================================= */
+/* THUMB */
+/* ========================================= */
+
+::-webkit-scrollbar-thumb {
+
+    background: #b7c0ca;
+
+    border-radius: 10px;
+}
+
+
+/* ========================================= */
+/* THUMB HOVER */
+/* ========================================= */
+
+::-webkit-scrollbar-thumb:hover {
+
+    background: #95a5b0;
+}
+
+
+/* ========================================= */
+/* RESPONSIVE 1200 */
+/* ========================================= */
+
+@media(max-width: 1200px) {
+
+    .contenedor {
+
+        flex-direction: column;
+    }
+
+    .izquierda {
+
+        width: 100%;
+    }
+
+    .derecha {
+
+        width: 100%;
+    }
+}
+
+
+/* ========================================= */
+/* RESPONSIVE 900 */
+/* ========================================= */
+
+@media(max-width: 900px) {
+
+    .navbar {
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .logo {
+
+        font-size: 28px;
+    }
+
+    .btn-cobrar {
+
+        font-size: 20px;
+    }
+
+    .btn-ventas {
+
+        font-size: 18px;
+    }
+}
+
+
+/* ========================================= */
+/* RESPONSIVE 700 */
+/* ========================================= */
+
+@media(max-width: 700px) {
+
+    table {
+
+        font-size: 12px;
+    }
+
+    th,
+    td {
+
+        padding: 8px;
+    }
+
+    .totales div {
+
+        font-size: 16px;
+    }
+
+    .total {
+
+        font-size: 22px;
+    }
+
+    .cambio {
+
+        font-size: 18px;
+    }
+
+    .modal-contenido {
+
+        padding: 18px;
+    }
+}
+
+
+/* ========================================= */
+/* RESPONSIVE 500 */
+/* ========================================= */
+
+@media(max-width: 500px) {
+
+    .contenedor {
+
+        padding: 10px;
+    }
+
+    .card {
+
+        padding: 15px;
+    }
+
+    .logo {
+
+        font-size: 22px;
+    }
+
+    .acciones {
+
+        width: 100%;
+
+        justify-content: center;
+    }
+
+    .acciones button {
+
+        width: 100%;
+    }
+
+    .btn-cobrar {
+
+        padding: 15px;
+
+        font-size: 18px;
+    }
+}
+
+/* ========================================= */
+/* MODAL FACTURA */
+/* ========================================= */
+
+.modal-factura-contenido {
+
+    width: 900px;
+
+    max-width: 95%;
+
+    background: #ffffff;
+
+    border-radius: 14px;
+
+    padding: 25px;
+
+    box-sizing: border-box;
+}
+
+
+/* ========================================= */
+/* HEADER */
+/* ========================================= */
+
+.factura-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+
+    border-bottom: 1px solid #e5e5e5;
+
+    padding-bottom: 15px;
+}
+
+.factura-header h2 {
+
+    margin: 0;
+
+    font-size: 24px;
+
+    color: #1e293b;
+}
+
+
+/* ========================================= */
+/* GRID */
+/* ========================================= */
+
+.factura-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+}
+
+.grupo-full {
+
+    grid-column: span 2;
+}
+
+
+/* ========================================= */
+/* INPUTS */
+/* ========================================= */
+
+.grupo {
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+.grupo label {
+
+    margin-bottom: 7px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #374151;
+}
+
+.grupo input,
+.grupo select {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    box-sizing: border-box;
+
+    outline: none;
+
+    background: #fff;
+}
+
+.grupo input[readonly] {
+
+    background: #f3f4f6;
+
+    color: #374151;
+}
+
+
+/* ========================================= */
+/* BOTONES */
+/* ========================================= */
+
+.factura-botones {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 15px;
+
+    margin-top: 30px;
+}
+
+.btn-cancelar {
+
+    background: #ef4444;
+
+    color: white;
+
+    border: none;
+
+    padding: 12px 20px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+.btn-cancelar:hover {
+
+    opacity: 0.9;
+}
+
+.btn-cobrar {
+
+    background: #2563eb;
+
+    color: white;
+
+    border: none;
+
+    padding: 12px 20px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+.btn-cobrar:hover {
+
+    opacity: 0.9;
+}
+
+
+/* ========================================= */
+/* RESPONSIVE */
+/* ========================================= */
+
+@media(max-width: 700px) {
+
+    .factura-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .grupo-full {
+
+        grid-column: span 1;
+    }
+
+    .factura-botones {
+
+        flex-direction: column;
+    }
+
+    .btn-cancelar,
+    .btn-cobrar {
+
+        width: 100%;
+    }
+}
+/* =========================================
+   PANEL VENTAS CORTE
+========================================= */
+
+.panel-ventas {
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    transition: all 0.4s ease;
+
+    margin-top: 15px;
+}
+
+
+.panel-ventas.activo {
+
+    max-height: 600px;
+}
+
+
+/* =========================================
+   CONTENIDO PANEL
+========================================= */
+
+.panel-ventas-contenido {
+
+    background: white;
+
+    border-radius: 12px;
+
+    padding: 15px;
+
+    border: 1px solid #d1d5db;
+}
+
+
+/* =========================================
+   TABLA RESPONSIVE
+========================================= */
+
+.tabla-responsive {
+
+    overflow-x: auto;
+}
+
+
+/* =========================================
+   TABLA
+========================================= */
+
+.panel-ventas table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+}
+
+
+.panel-ventas th {
+
+    background: #1e3a5f;
+
+    color: white;
+
+    padding: 12px;
+
+    font-size: 14px;
+}
+
+
+.panel-ventas td {
+
+    padding: 10px;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    text-align: center;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   BOTÓN EDITAR
+========================================= */
+
+.btn-editar-venta {
+
+    background: #f59e0b;
+
+    border: none;
+
+    color: white;
+
+    padding: 7px 10px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    margin-right: 5px;
+
+    transition: 0.3s;
+}
+
+.btn-editar-venta:hover {
+
+    transform: scale(1.05);
+}
+
+
+/* =========================================
+   BOTÓN ELIMINAR
+========================================= */
+
+.btn-eliminar-venta {
+
+    background: #dc2626;
+
+    border: none;
+
+    color: white;
+
+    padding: 7px 10px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.btn-eliminar-venta:hover {
+
+    transform: scale(1.05);
+}
+/* =========================================
+   MODAL CORREO
+========================================= */
+
+#modalCorreo {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.6);
+
+    display: none;
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 999999;
+}
+
+
+/* =========================================
+   CONTENIDO
+========================================= */
+
+#modalCorreo .modal-contenido {
+
+    width: 420px;
+
+    background: white;
+
+    border-radius: 14px;
+
+    padding: 25px;
+
+    box-shadow: 0 0 20px rgba(0,0,0,0.25);
+
+    animation: aparecerModal .2s ease;
+}
+
+
+/* =========================================
+   ANIMACIÓN
+========================================= */
+
+@keyframes aparecerModal {
+
+    from {
+
+        transform: scale(.9);
+        opacity: 0;
+    }
+
+    to {
+
+        transform: scale(1);
+        opacity: 1;
+    }
+}

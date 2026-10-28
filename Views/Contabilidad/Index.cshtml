@@ -1,0 +1,44 @@
+@{ Layout = null; }
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Contabilidad</title>
+
+<link rel="stylesheet" href="@Url.Content("~/frontend/interno/contabilidad/css/contabilidad.css")">
+
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="logo">📘 PAPELABORANTE</div>
+    <button onclick="window.location.href='/Interno/Index'">🏠 Inicio</button>
+    <button onclick="logout()" class="logout-btn">Cerrar sesión</button>
+</header>
+
+<div class="contenedor">
+
+    <!-- 🔥 MENÚ -->
+    <aside class="sidebar">
+        <ul>
+            <li onclick="ir('/Contabilidad/Proveedores')">📦 Proveedores</li>
+            <li onclick="ir('/Contabilidad/Clientes')">👥 Clientes</li>
+            <li onclick="ir('/Contabilidad/Facturas')">📄 Facturas</li>
+            <li onclick="ir('/Contabilidad/Horarios')">🕒 Horarios</li>
+            <li onclick="ir('/Contabilidad/Nomina')">💰 Nómina</li>
+        </ul>
+    </aside>
+
+    <!-- 🔥 CONTENIDO -->
+    <main class="contenido">
+        <h1>Bienvenido al módulo de Contabilidad</h1>
+        <p>Selecciona una opción del menú</p>
+    </main>
+
+</div>
+
+<script src="@Url.Content("~/frontend/interno/contabilidad/js/contabilidad.js")"></script>
+
+</body>
+</html>

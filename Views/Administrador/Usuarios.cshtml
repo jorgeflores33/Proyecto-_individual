@@ -1,0 +1,167 @@
+@{ Layout = null; }
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Usuarios</title>
+
+<link rel="stylesheet" href="@Url.Content("~/frontend/interno/administrador/css/administrador_usuario.css")">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+        👤 Usuarios
+    </div>
+
+    <div class="acciones">
+
+        <button onclick="window.location.href='/Administrador/Index'">
+            ← Volver
+        </button>
+
+        <button onclick="logout()">
+            Cerrar sesión
+        </button>
+
+    </div>
+
+</header>
+
+<div class="contenedor">
+
+    <div class="card">
+
+        <div class="card-header">
+
+            <h2>
+                Gestión de Usuarios
+            </h2>
+
+            <button
+                class="btn-crear"
+                onclick="abrirModal()"
+            >
+                + Crear Usuario
+            </button>
+
+        </div>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>ID</th>
+
+                    <th>Usuario</th>
+
+                    <th>Nombre</th>
+
+                    <th>Función</th>
+
+                    <th>Rol</th>
+
+                    <th>Acciones</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="tablaUsuarios"></tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<!-- 🔥 MODAL -->
+
+<div id="modalUsuario" class="modal">
+
+    <div class="modal-box">
+
+        <h2 id="tituloModal">
+            Nuevo Usuario
+        </h2>
+
+        <!-- trabajador -->
+        <select id="trabajador">
+
+            <option value="">
+                Seleccionar trabajador
+            </option>
+
+        </select>
+
+        <!-- cliente -->
+        <select id="cliente">
+
+            <option value="">
+                Seleccionar cliente
+            </option>
+
+        </select>
+
+        <!-- usuario -->
+        <input
+            id="usuario"
+            placeholder="Nombre de usuario"
+        >
+
+        <!-- password -->
+        <input
+            id="password"
+            type="password"
+            placeholder="Contraseña"
+        >
+
+        <!-- rol -->
+        <select id="rol">
+
+            <option value="">
+                Seleccionar rol
+            </option>
+
+            <option value="admin">
+                Admin
+            </option>
+
+            <option value="cajero">
+                Cajero
+            </option>
+
+            <option value="cliente">
+                Cliente
+            </option>
+
+        </select>
+
+        <div class="botones">
+
+            <button onclick="guardar()">
+                💾 Guardar
+            </button>
+
+            <button onclick="cerrarModal()">
+                ❌ Cancelar
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="@Url.Content("~/frontend/interno/administrador/js/administrador_usuario.js")"></script>
+
+</body>
+</html>

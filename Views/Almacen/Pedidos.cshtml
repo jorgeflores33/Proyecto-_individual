@@ -1,0 +1,89 @@
+@{ Layout = null; }
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Pedidos</title>
+
+<link rel="stylesheet" href="@Url.Content("~/frontend/interno/almacen/css/almacen_pedidos.css")">
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="logo">📦 Pedidos</div>
+
+    <div class="acciones">
+        <button onclick="window.location.href='/Almacen/Index'">← Volver</button>
+        <button onclick="logout()">Cerrar sesión</button>
+    </div>
+</header>
+
+<div class="contenedor">
+
+    <div class="card">
+
+        <div class="card-header">
+            <input type="text" id="buscador" placeholder="Buscar pedido...">
+            <input type="date" id="filtroFecha">
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Folio</th>
+                    <th>Fecha</th>
+                    <th>Cliente</th>
+                    <th>Dirección</th>
+                    <th>Teléfono</th>
+                    <th>Imprimir</th>
+                </tr>
+            </thead>
+
+            <tbody id="tablaPedidos"></tbody>
+        </table>
+
+    </div>
+
+</div>
+
+<!-- MODAL PDF -->
+<div id="modalPDF" class="modal">
+    <div class="modal-box">
+
+        <div id="contenidoPDF">
+
+            <h2>PEDIDO</h2>
+
+            <p><strong>Folio:</strong> <span id="pdfFolio"></span></p>
+            <p><strong>Cliente:</strong> <span id="pdfCliente"></span></p>
+            <p><strong>Dirección:</strong> <span id="pdfDireccion"></span></p>
+            <p><strong>Teléfono:</strong> <span id="pdfTelefono"></span></p>
+            <p><strong>Fecha:</strong> <span id="pdfFecha"></span></p>
+
+            <h3>Productos</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Cantidad</th>
+                    </tr>
+                </thead>
+                <tbody id="pdfDetalle"></tbody>
+            </table>
+
+        </div>
+
+        <div class="botones">
+            <button onclick="imprimir()">🖨 Imprimir</button>
+            <button onclick="cerrarModal()">❌ Cerrar</button>
+        </div>
+
+    </div>
+</div>
+
+<script src="@Url.Content("~/frontend/interno/almacen/js/almacen_pedidos.js")"></script>
+
+</body>
+</html>

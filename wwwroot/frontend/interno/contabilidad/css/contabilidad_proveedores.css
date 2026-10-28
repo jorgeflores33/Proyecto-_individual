@@ -1,0 +1,131 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #f4f6f9;
+}
+
+/* 🔵 NAVBAR */
+.navbar {
+    background: #1e3a5f;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    align-items: center;
+}
+
+.acciones button {
+    margin-left: 10px;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+/* 🔥 CONTENEDOR */
+.contenedor {
+    padding: 20px;
+}
+
+/* 🔥 CARD */
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* 🔥 HEADER */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+/* 🔍 BUSCADOR */
+#buscadorProveedor {
+    width: 250px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* ➕ BOTÓN */
+.btn-crear {
+    background: #1abc9c;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* 📊 TABLA */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background: #f0f0f0;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    text-align: left;
+}
+
+/* 🔘 BOTONES */
+button {
+    border: none;
+    padding: 6px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* 🔥 MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-box {
+    background: white;
+    padding: 25px;
+    width: 350px;
+    border-radius: 10px;
+}
+
+/* INPUTS */
+.modal-box input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+}
+
+/* BOTONES MODAL */
+.botones {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-guardar {
+    background: #2ecc71;
+    color: white;
+}
+
+.btn-cancelar {
+    background: #e74c3c;
+    color: white;
+}

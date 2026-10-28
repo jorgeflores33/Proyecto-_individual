@@ -1,0 +1,96 @@
+@{ Layout = null; }
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Papelaborante</title>
+    <link rel="stylesheet" href="@Url.Content("~/frontend/styles.css")">
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="logo">📘 PAPELABORANTE</div>
+
+    <nav class="menu">
+        <a href="#" id="btnInicio">Inicio</a>
+        <a href="#" id="btnProductos">Productos</a>
+        <a href="#" id="btnAcerca">Acerca de</a>
+    </nav>
+
+    <div class="actions">
+        <input type="text" placeholder="🔍">
+        <button id="btnLogin" class="btn login">Iniciar Sesión</button>
+        <button class="btn contact" id="btnContacto">Contacto</button>
+        <div class="cart" id="btnCarrito">🛒<span>2</span></div>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="hero-text">
+        <h1>Encuentra Todo para tu Oficina y Escuela</h1>
+        <p>Oferta amplia y al mejor precio en artículos de papelería, oficina y escolares.</p>
+        <button class="btn products" onclick="irProductos()">Ver Productos</button>
+    </div>
+</section>
+
+<section class="categorias">
+    <h2>Categorías Populares</h2>
+    <p>Explora nuestras categorías de productos más buscadas</p>
+
+    <div class="cards">
+
+        <!-- 🔥 CATEGORIA 1 -->
+        <div class="card" onclick="irCategoria('Utiles Escolares')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuhB9Z2FVfONMDHzmz13t6oPcHaho7BlT7lg&s">
+            <h3>Útiles Escolares</h3>
+        </div>
+
+        <!-- 🔥 CATEGORIA 2 -->
+        <div class="card" onclick="irCategoria('Papeleria y Oficina')">
+            <img src="https://static.vecteezy.com/system/resources/previews/010/597/298/non_2x/desktop-stand-with-pencils-pens-scissors-semi-circular-ruler-highlighter-and-corrector-stationery-items-for-school-work-study-illustration-cartoon-style-vector.jpg">
+            <h3>Papelería y Oficina</h3>
+        </div>
+
+        <!-- 🔥 CATEGORIA 3 -->
+        <div class="card" onclick="irCategoria('Arte y Dibujo')">
+            <img src="https://cdn-icons-png.flaticon.com/512/2970/2970785.png">
+            <h3>Arte y Dibujo</h3>
+        </div>
+
+        <!-- 🔥 CATEGORIA 4 -->
+        <div class="card" onclick="irCategoria('Computo')">
+            <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png">
+            <h3>Cómputo</h3>
+        </div>
+
+    </div>
+</section>
+
+<!-- 🔥 MODAL LOGIN -->
+<div id="loginModal" class="modal">
+    <div class="modal-box">
+
+        <h2>📘 PAPELABORANTE</h2>
+        <p>Inicia sesión en tu cuenta</p>
+
+        <label for="usuario">Usuario</label>
+
+        <input
+            type="text"
+            id="usuario"
+            placeholder="Ingresa tu usuario"
+        >
+
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" placeholder="••••••••">
+
+        <button class="btn login" id="submitLogin">Iniciar Sesión</button>
+
+    </div>
+</div>
+
+<script src="@Url.Content("~/frontend/script.js")"></script>
+</body>
+</html>

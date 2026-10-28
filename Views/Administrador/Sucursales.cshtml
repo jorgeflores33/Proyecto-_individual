@@ -1,0 +1,68 @@
+@{ Layout = null; }
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Sucursales</title>
+
+<link rel="stylesheet" href="@Url.Content("~/frontend/interno/administrador/css/administrador_sucursal.css")">
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="logo">🏢 Sucursales</div>
+
+    <div class="acciones">
+        <button onclick="abrirModal()">+ Nueva Sucursal</button>
+        <button onclick="regresar()">⬅ Volver</button>
+    </div>
+</header>
+
+<div class="contenedor">
+
+    <div class="card">
+
+        <h2>Listado de Sucursales</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Dirección</th>
+                    <th>Teléfono</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+
+            <tbody id="tablaSucursales">
+                <!-- JS -->
+            </tbody>
+        </table>
+
+    </div>
+
+</div>
+
+<!-- 🔥 MODAL -->
+<div id="modalSucursal" class="modal">
+    <div class="modal-box">
+
+        <h3>Registrar Sucursal</h3>
+
+        <input type="text" id="nombre" placeholder="Nombre">
+        <input type="text" id="direccion" placeholder="Dirección">
+        <input type="text" id="telefono" placeholder="Teléfono">
+
+        <div class="modal-actions">
+            <button onclick="guardar()">Guardar</button>
+            <button onclick="cerrarModal()">Cancelar</button>
+        </div>
+
+    </div>
+</div>
+
+<script src="@Url.Content("~/frontend/interno/administrador/js/administrador_sucursal.js")"></script>
+
+</body>
+</html>

@@ -1,0 +1,218 @@
+@{ Layout = null; }
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Clientes</title>
+
+<link rel="stylesheet" href="@Url.Content("~/frontend/interno/contabilidad/css/contabilidad_clientes.css")">
+
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="logo">👥 Clientes</div>
+
+    <div class="acciones">
+        <button onclick="window.location.href='/Administrador/Index'">← Volver</button>
+        <button onclick="logout()">Cerrar sesión</button>
+    </div>
+</header>
+
+<div class="contenedor">
+
+    <div class="card">
+
+        <div class="card-header">
+
+            <!-- 🔍 BUSCADOR -->
+            <input type="text" id="buscadorCliente" placeholder="Buscar cliente...">
+
+            <button class="btn-crear" onclick="abrirModal()">+ Crear Cliente</button>
+
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Teléfono</th>
+                    <th>Correo</th>
+                    <th>Dirección</th>
+                    <th>RFC</th>
+                    <th>Régimen Fiscal</th>
+                    <th>CP</th>
+                    <th>Estado</th>
+                    <th>Ciudad</th>
+                    <th>Folio</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+
+            <tbody id="tablaClientes"></tbody>
+        </table>
+
+    </div>
+
+</div>
+
+<!-- 🔥 MODAL -->
+<div id="modalCliente" class="modal">
+
+    <div class="modal-box">
+
+        <h2 id="tituloModal">Nuevo Cliente</h2>
+
+        <input id="nombre" placeholder="Nombre">
+
+        <input id="telefono" placeholder="Teléfono">
+
+        <input id="correo" placeholder="Correo">
+
+        <input id="direccion" placeholder="Dirección">
+
+        <input id="rfc" placeholder="RFC">
+
+        <!-- 🔥 RÉGIMEN FISCAL -->
+        <select id="regimen_fiscal">
+
+            <option value="">
+                Seleccionar Régimen Fiscal
+            </option>
+
+            <option value="Régimen Simplificado de Confianza">
+                Régimen Simplificado de Confianza
+            </option>
+
+            <option value="Sueldos y Salarios e Ingresos Asimilados a Salarios">
+                Sueldos y Salarios e Ingresos Asimilados a Salarios
+            </option>
+
+            <option value="Régimen de Actividades Empresariales y Profesionales">
+                Régimen de Actividades Empresariales y Profesionales
+            </option>
+
+            <option value="Régimen de Incorporación Fiscal">
+                Régimen de Incorporación Fiscal
+            </option>
+
+            <option value="Régimen de Actividades Empresariales con ingresos a través de Plataformas Tecnológicas">
+                Régimen de Actividades Empresariales con ingresos a través de Plataformas Tecnológicas
+            </option>
+
+            <option value="Arrendamiento">
+                Arrendamiento
+            </option>
+
+            <option value="Enajenación de Bienes">
+                Enajenación de Bienes
+            </option>
+
+            <option value="Adquisición de Bienes">
+                Adquisición de Bienes
+            </option>
+
+            <option value="Intereses">
+                Intereses
+            </option>
+
+            <option value="Obtención de Premios">
+                Obtención de Premios
+            </option>
+
+            <option value="Dividendos">
+                Dividendos
+            </option>
+
+            <option value="Demás ingresos">
+                Demás ingresos
+            </option>
+
+            <option value="Sin obligaciones fiscales">
+                Sin obligaciones fiscales
+            </option>
+
+            <option value="Sociedades Mercantiles">
+                Sociedades Mercantiles
+            </option>
+
+            <option value="Personas Morales con Fines no Lucrativos">
+                Personas Morales con Fines no Lucrativos
+            </option>
+
+            <option value="Coordinados">
+                Coordinados
+            </option>
+
+            <option value="Régimen de Actividades Agrícolas, Ganaderas, Silvícolas y Pesqueras">
+                Régimen de Actividades Agrícolas, Ganaderas, Silvícolas y Pesqueras
+            </option>
+
+            <option value="Régimen Simplificado de Confianza para Personas Morales">
+                Régimen Simplificado de Confianza para Personas Morales
+            </option>
+
+            <option value="Consolidación">
+                Consolidación
+            </option>
+
+            <option value="Residentes en el Extranjero con establecimiento permanente en México">
+                Residentes en el Extranjero con establecimiento permanente en México
+            </option>
+
+            <option value="Residentes en el Extranjero sin establecimiento permanente en México">
+                Residentes en el Extranjero sin establecimiento permanente en México
+            </option>
+
+            <option value="Empresas Productivas del Estado">
+                Empresas Productivas del Estado
+            </option>
+
+            <option value="Opcional para Grupos de Sociedades">
+                Opcional para Grupos de Sociedades
+            </option>
+
+            <option value="Coordinados del Autotransporte">
+                Coordinados del Autotransporte
+            </option>
+
+            <option value="Hidrocarburos">
+                Hidrocarburos
+            </option>
+
+            <option value="Plataformas Tecnológicas para Personas Morales">
+                Plataformas Tecnológicas para Personas Morales
+            </option>
+
+        </select>
+
+        <input id="cp" placeholder="Código Postal">
+
+        <input id="estado" placeholder="Estado">
+
+        <input id="ciudad" placeholder="Ciudad">
+
+        <input id="folio" placeholder="Folio">
+
+        <div class="botones">
+
+            <button onclick="guardarCliente()">
+                💾 Guardar
+            </button>
+
+            <button onclick="cerrarModal()">
+                ❌ Cancelar
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="@Url.Content("~/frontend/interno/contabilidad/js/contabilidad_clientes.js")"></script>
+
+</body>
+</html>

@@ -1,0 +1,177 @@
+@{ Layout = null; }
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Proveedores</title>
+
+<link rel="stylesheet" href="@Url.Content("~/frontend/interno/contabilidad/css/contabilidad_proveedores.css")">
+
+</head>
+
+<body>
+
+<!-- 🔵 HEADER -->
+
+<header class="navbar">
+
+    <div class="logo">
+        📦 Proveedores
+    </div>
+
+    <div class="acciones">
+
+        <button onclick="window.location.href='/Administrador/Index'">
+            ← Volver
+        </button>
+
+        <button onclick="logout()">
+            Cerrar sesión
+        </button>
+
+    </div>
+
+</header>
+
+<!-- 🔥 CONTENEDOR -->
+
+<div class="contenedor">
+
+    <div class="card">
+
+        <div class="card-header">
+
+            <!-- 🔍 BUSCADOR -->
+
+            <input
+                type="text"
+                id="buscadorProveedor"
+                placeholder="🔍 Buscar proveedor..."
+            >
+
+            <!-- ➕ BOTÓN -->
+
+            <button
+                class="btn-crear"
+                onclick="abrirModal()"
+            >
+                + Crear Proveedor
+            </button>
+
+        </div>
+
+        <!-- 📊 TABLA -->
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>ID</th>
+
+                    <th>Nombre</th>
+
+                    <th>Teléfono</th>
+
+                    <th>Correo</th>
+
+                    <th>Dirección</th>
+
+                    <th>Folio</th>
+
+                    <th>Acciones</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="tablaProveedores"></tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<!-- 🔥 MODAL -->
+
+<div id="modalProveedor" class="modal">
+
+    <div class="modal-box">
+
+        <h2 id="tituloModal">
+            Nuevo Proveedor
+        </h2>
+
+        <!-- ID oculto -->
+
+        <input
+            type="hidden"
+            id="id"
+        >
+
+        <!-- nombre -->
+
+        <input
+            id="nombre"
+            placeholder="Nombre"
+        >
+
+        <!-- telefono -->
+
+        <input
+            id="telefono"
+            placeholder="Teléfono"
+        >
+
+        <!-- correo -->
+
+        <input
+            id="correo"
+            placeholder="Correo"
+        >
+
+        <!-- direccion -->
+
+        <input
+            id="direccion"
+            placeholder="Dirección"
+        >
+
+        <!-- folio -->
+
+        <input
+            id="folio"
+            placeholder="Folio"
+        >
+
+        <div class="botones">
+
+            <button
+                class="btn-guardar"
+                onclick="guardarProveedor()"
+            >
+                💾 Guardar
+            </button>
+
+            <button
+                class="btn-cancelar"
+                onclick="cerrarModal()"
+            >
+                ❌ Cancelar
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="@Url.Content("~/frontend/interno/contabilidad/js/contabilidad_proveedores.js")"></script>
+
+</body>
+</html>

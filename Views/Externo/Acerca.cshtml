@@ -1,0 +1,78 @@
+@{ Layout = null; }
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de - Papelaborante</title>
+
+    <!-- ✅ CORREGIDO -->
+    <link rel="stylesheet" href="@Url.Content("~/frontend/externo/acerca/acerca.css")">
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="logo">📘 PAPELABORANTE</div>
+
+    <nav class="menu">
+        <!-- ✅ CORREGIDO -->
+        <a href="/Home/Index">Inicio</a>
+        <a href="/Externo/Productos">Productos</a>
+        <a href="/Externo/Acerca">Acerca de</a>
+    </nav>
+
+    <div class="actions">
+        <button class="btn login" onclick="irInicio()">⬅ Regresar</button>
+    </div>
+</header>
+
+<section class="acerca-container">
+
+    <h1>Acerca de PAPELABORANTE</h1>
+
+    <div class="acerca-grid">
+
+        <div class="bloque">
+            <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRnghr3Vj_kXH_TKUdEY0ll5CO-TnZlF4uQyd8K3V7hOm4Cvpbx">
+            <div>
+                <h3>Presentación de la Empresa</h3>
+                <p>Con más de 25 años de experiencia, somos líderes en la distribución de materiales de oficina y escolares. Nuestra trayectoria nos avala como un socio confiable para tu éxito.</p>
+            </div>
+        </div>
+
+        <div class="bloque">
+            <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSu9T5MaMCeLw5skJaN9KNWd66wzz9EgzI8nKDpVTjY7XbLGS6W">
+            <div>
+                <h3>Valores Corporativos</h3>
+                <p><b>Calidad:</b> Compromiso con productos de excelencia.<br>
+                <b>Servicio:</b> Atención excepcional.<br>
+                <b>Honestidad:</b> Transparencia en cada operación.</p>
+            </div>
+        </div>
+
+        <div class="bloque">
+            <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSrqW1NqpF-gzIZgFUBhYf-67yXB4Jxi1l9FNF-gRdpFSPYLfhr">
+            <div>
+                <h3>Enfoque y Misión</h3>
+                <p>Facilitar el acceso a los mejores materiales, permitiendo que profesionales y estudiantes alcancen su máximo potencial.</p>
+            </div>
+        </div>
+
+        <div class="bloque">
+            <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRlpLsegA1Fq2Gzxjz0_ETCX3Wr-J-P0KBzenHv6Iqv9DK0kDmP">
+            <div>
+                <h3>Cobertura Nacional</h3>
+                <p>Entregamos a domicilio en toda la República Mexicana. Tu material llega rápido y seguro.</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ✅ CORREGIDO -->
+<script src="@Url.Content("~/frontend/externo/acerca/acerca.js")"></script>
+
+</body>
+</html>

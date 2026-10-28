@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: white;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.menu a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.login {
+    background: #4a90e2;
+    color: white;
+}
+
+.contact {
+    background: #6c8ebf;
+    color: white;
+}
+
+.cart {
+    position: relative;
+}
+
+.cart span {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background: green;
+    color: white;
+    font-size: 12px;
+    padding: 2px 5px;
+    border-radius: 50%;
+}
+
+/* CONTENIDO */
+.contacto-container {
+    max-width: 900px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.contacto-container h1 {
+    margin-bottom: 30px;
+}
+
+/* TARJETAS */
+.card-sucursal {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card-sucursal h2 {
+    margin-bottom: 15px;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.info div {
+    width: 45%;
+}
+
+.info a {
+    color: #4a90e2;
+    text-decoration: none;
+}
+
+/* CONTACTO GENERAL */
+.contacto-general {
+    margin-top: 40px;
+    font-size: 18px;
+}

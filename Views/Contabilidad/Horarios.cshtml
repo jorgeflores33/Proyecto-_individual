@@ -1,0 +1,79 @@
+@{ Layout = null; }
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Horarios</title>
+
+<link rel="stylesheet" href="@Url.Content("~/frontend/interno/contabilidad/css/contabilidad_horario.css")">
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="logo">🕒 Horarios</div>
+
+    <div class="acciones">
+        <button onclick="window.location.href='/Contabilidad/Index'">← Volver</button>
+        <button onclick="logout()">Cerrar sesión</button>
+    </div>
+</header>
+
+<div class="contenedor">
+
+    <div class="card">
+
+        <div class="card-header">
+            <h2>Registro de Asistencia</h2>
+
+            <button class="btn-crear" onclick="abrirModal()">
+                + Registrar Entrada
+            </button>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Trabajador</th>
+                    <th>Rol</th>
+                    <th>Entrada</th>
+                    <th>Salida</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+
+            <tbody id="tablaAsistencia"></tbody>
+        </table>
+
+    </div>
+
+</div>
+
+<!-- 🔥 MODAL -->
+<div id="modalHorario" class="modal">
+
+    <div class="modal-box">
+
+        <h2>Registrar Asistencia</h2>
+
+        <select id="trabajador" onchange="llenarSucursal()"></select>
+
+        <input id="sucursal" placeholder="Sucursal" readonly>
+
+        <input id="fecha" type="date">
+        <input id="entrada" type="time">
+        <input id="salida" type="time">
+
+        <div class="botones">
+            <button onclick="guardarAsistencia()">💾 Guardar</button>
+            <button onclick="cerrarModal()">❌ Cancelar</button>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="@Url.Content("~/frontend/interno/contabilidad/js/contabilidad_horario.js")"></script>
+
+</body>
+</html>
